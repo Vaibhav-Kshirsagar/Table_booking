@@ -1,0 +1,40 @@
+/* Home.css */
+*{
+  background-image: none;
+  background: none;
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: none; /* Remove the background image for the home page */
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .tabs a {
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tabs a:hover {
+    background-color: #555;
+  }
+  

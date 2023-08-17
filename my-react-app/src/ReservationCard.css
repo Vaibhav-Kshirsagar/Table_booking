@@ -1,0 +1,29 @@
+/* ReservationCard.css */
+
+.reservation-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+.reservation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reservation-details {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 600px) {
+  .reservation-card {
+    max-width: 100%; /* Adjust as needed for smaller screens */
+  }
+}
