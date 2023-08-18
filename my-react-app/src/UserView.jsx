@@ -3,7 +3,7 @@ import axios from 'axios';
 import ReservationCard from './ReservationCard';
 import { useParams } from 'react-router-dom';
 import "./UserView.css"
-
+const baseurl = "https://tablebookingback.onrender.com"
 const UserView = () => {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ const UserView = () => {
 
   const fetchUserData = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:8080/user_info/${userId}`);
+      const response = await axios.get(`${baseurl}/user_info/${userId}`);
       const user = response.data;
       console.log(user);
       console.log(user.id);

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Reservation/Reservation.css';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; 
+const baseurl = "https://tablebookingback.onrender.com";
 const Update = () =>{
   const [name , setName] = useState("");
   const [email , setEmail] = useState("");
@@ -14,7 +15,7 @@ const Update = () =>{
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-        const response = await axios.put('http://localhost:8080/user_info/update/:userId', {
+        const response = await axios.put(`${baseurl}/user_info/update/:${userId}`, {
             name,
             email,
             phone,

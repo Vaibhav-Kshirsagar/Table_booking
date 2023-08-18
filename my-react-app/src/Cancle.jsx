@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReservationCard from './ReservationCard';
 import "./Cancle.css"
-
+const baseurl = "https://tablebookingback.onrender.com"
 const Cancel = () => {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ const Cancel = () => {
 
   const fetchUserData = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:8080/user_info/${userId}`);
+      const response = await axios.get(`${baseurl}/user_info/${userId}`);
       const user = response.data;
       console.log(user);
       console.log(user.id);
@@ -32,7 +32,7 @@ const Cancel = () => {
   };
   const handleCancleBooking = async()=>{
     try{
-        const response = await axios.delete(`http://localhost:8080/user_info/${userId}`);
+        const response = await axios.delete(`${baseurl}/user_info/${userId}`);
         alert("Your booking is cancelled")
         navigate('/');
     }catch(error){
