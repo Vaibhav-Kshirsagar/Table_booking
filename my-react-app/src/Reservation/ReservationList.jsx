@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ReservationList.css'; // Make sure the path to your CSS file is correct
-
+const baseurl = "https://tablebookingback.onrender.com";
 const ReservationList = () => {
     const [reservations, setReservations] = useState([]); 
     // const [status,setStatus] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/user_info')
+        axios.get(`${baseurl}/user_info`)
             .then(response => setReservations(response.data))
             .catch(error => console.error(error));
     }, []);
