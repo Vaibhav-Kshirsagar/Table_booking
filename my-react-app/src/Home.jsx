@@ -30,7 +30,7 @@ const Home = () => {
         <h1>Welcome to Awesome Hotel</h1>
       </header>
       <nav className="tabs">
-        <a href="/book">Book Table</a>
+        <Link to={"/book"}>Book Table</Link>
         <a onClick={handleCancelBookingClick}>Cancel Booking</a>
         <a onClick={handleViewBookingClick}>View Bookings</a>
         <a onClick={handleUpdateBookingClick}>Update Booking</a>

@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReservationCard from './ReservationCard';
 import "./Cancle.css"
-const baseurl = "https://tablebookingback.onrender.com"
+// const baseurl = "https://tablebookingback.onrender.com"
+const baseurl = "http://localhost:8080";
 const Cancel = () => {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
@@ -45,7 +46,7 @@ const Cancel = () => {
   return (
     <div className="user-info-container">
       {userData && <ReservationCard reservation={userData} />}
-      <button onClick={handleCancleBooking}>Cancle booking</button>
+      {userData && <button onClick={handleCancleBooking}>Cancle booking</button>}
       {error && <h3>{error}</h3>}
     </div>
   );
