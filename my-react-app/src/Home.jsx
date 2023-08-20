@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="header">
-        <h1 style={{ color: 'red',background:'black' }}>Welcome to Awesome Hotel</h1>
+        <h1>Welcome to Awesome Hotel</h1>
       </header>
       <nav className="tabs">
         <Link to={"/book"}>Book Table</Link>
